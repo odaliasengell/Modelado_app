@@ -1,0 +1,132 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #FDEFFB;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #FFF5F7;
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h2 {
+    color: #FF66B2;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+label {
+    color: #FF66B2;
+    font-size: 16px;
+    display: block;
+    margin: 10px 0 5px;
+    text-align: left;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #FFB6C1;
+    background-color: #FFE4E1;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #FF66B2;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #FF66B2;
+    box-shadow: 0 0 8px rgba(255, 102, 178, 0.5);
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #FF66B2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #FF85C0;
+}
+
+.result {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #FFE4E1;
+    border-radius: 10px;
+    border: 1px solid #FFB6C1;
+    color: #FF66B2;
+    font-size: 16px;
+}
+
+.hidden {
+    display: none;
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.fade-in.show {
+    opacity: 1;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #FDEFFB;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('odall.jpg');
+    /* Ruta de la imagen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    /* Blanco semitransparente */
+    z-index: -1;
+}
+
+.container {
+    background-color: #FFF5F7;
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+    position: relative;
+    z-index: 1;
+}
