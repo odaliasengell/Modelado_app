@@ -32,4 +32,23 @@ jobs:
       - name: Install Dependencies
         run: npm install
       - name: Run Tests
-        run: npm test  # Este comando ejecuta Jest.
+        run: npm test  # Ejecuta Jest
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: test  # Esto asegura que el job de deploy solo se ejecute si el job de test pasa.
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - name: Install Dependencies
+        run: npm install
+      - name: Deploy to Server
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        run: |
+          echo "Deploying application to production server..."
+          ssh user@server 'cd /path/to/app && git pull origin main && npm install && pm2 restart app'
