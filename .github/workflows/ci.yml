@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write  # Añade esta línea para otorgar permisos de escritura al bot
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -59,4 +62,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}  # Asegúrate de que esto está bien configurado
-          publish_dir: ./build  # O la carpeta donde se genera tu sitio
+          publish_dir: ./build  # Cambia si tu carpeta de build es diferente
