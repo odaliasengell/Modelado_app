@@ -5,11 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "build": "echo 'No build step needed'"
+    "build": "echo 'No build step needed'",
+    "start": "http-server ./ -p 3000"
   },
   "dependencies": {},
   "devDependencies": {
-    "jest": "^27.0.0"
+    "jest": "^27.0.0",
+    "http-server": "^14.1.0"
   },
   "author": "",
   "license": "ISC"
